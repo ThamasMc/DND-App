@@ -1,0 +1,8 @@
+<h1>I'm a character index page!</h1>
+<p><%= "Current User Signed in?:  #{user_signed_in?}" %></p>
+<% @characters.each do |character|%>
+  <p><%= "Character name: #{character.name}" %></p>
+  <p><%= "Character race: #{character.race.name}"%></p>
+  <p><%= "Character description: #{character.race.description}"%></p>
+<%end%>
+<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
